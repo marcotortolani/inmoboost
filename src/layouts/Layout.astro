@@ -5,11 +5,10 @@ interface Props {
 
 const { title } = Astro.props
 import Header from '@/components/react/Header'
-import Footer from '@/components/react/Footer'
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth ">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -21,7 +20,6 @@ import Footer from '@/components/react/Footer'
   <body>
     <Header client:visible />
     <slot />
-    <!-- <Footer client:visible /> -->
   </body>
 </html>
 <!-- <style is:global>

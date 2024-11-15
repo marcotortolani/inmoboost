@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Building2, Home, Mail, MapPin, Menu, Phone } from 'lucide-react'
+import { Building2, Mail, MapPin, Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 
@@ -137,13 +137,13 @@ export default function Header() {
                     hola@inmoboost.uy
                   </a>
                 </div>
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <Phone className="h-6 w-6" />
                   <span className="text-sm">+598 12345678</span>
-                </div>
+                </div> */}
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-6 w-6" />
-                  <span className="text-sm">Montevideo, Uruguay</span>
+                  <span className="text-sm">Uruguay</span>
                 </div>
               </div>
             </SheetContent>

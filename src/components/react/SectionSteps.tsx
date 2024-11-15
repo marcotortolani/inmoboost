@@ -7,10 +7,13 @@ export default function SectionSteps() {
     window.location.href = href
   }
   return (
-    <section className="relative min-h-[600px] w-full bg-white px-4 py-12 md:px-6">
+    <section
+      className="relative min-h-[600px] w-full bg-white px-4 py-12 md:px-6 scroll-mt-20"
+      id="steps"
+    >
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-12">
         <div className=" hidden lg:flex  items-center justify-center relative">
-          <div className="absolute left-0 top-0 translate-x-[-50%] translate-y-[10%] h-[500px] w-[500px] xl:translate-x-[-100%] xl:translate-y-0 xl:h-[500px] xl:w-[500px] rounded-full bg-primary/90"></div>
+          <div className="absolute left-0 top-0 translate-x-[-50%] translate-y-[10%] h-[500px] w-[500px] xl:translate-x-[-90%] xl:-translate-y-20 xl:h-[800px] xl:w-[800px] rounded-full bg-primary/90"></div>
         </div>
         <div className="flex flex-col justify-center space-y-6 text-primary">
           <h2 className="text-4xl font-bold text-center lg:text-left">

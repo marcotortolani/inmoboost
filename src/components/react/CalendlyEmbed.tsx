@@ -1,9 +1,11 @@
 export default function CalendlyEmbed() {
   return (
-    <iframe
-      src="https://calendly.com/d/crjb-55h-7t9/one-off-meeting"
-      width="100%"
-      height="800"
-    ></iframe>
+    <div className=" min-h-fit bg-gray-50 flex items-center justify-center">
+      <iframe
+        src="https://calendly.com/hola-inmoboost/30min"
+        width="100%"
+        height="800"
+      ></iframe>
+    </div>
   )
 }

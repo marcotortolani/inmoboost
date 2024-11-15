@@ -51,12 +51,6 @@ export default function Header() {
             </a>
             <a
               className="text-sm lg:text-base font-medium hover:underline underline-offset-4"
-              href="/#steps"
-            >
-              Lo Hacemos Realidad
-            </a>
-            <a
-              className="text-sm lg:text-base font-medium hover:underline underline-offset-4"
               href="/#key-elements"
             >
               Elementos Clave
@@ -95,13 +89,6 @@ export default function Header() {
                   href="/#home"
                 >
                   Inicio
-                </a>
-                <div className="w-full bg-primary h-[1px]"></div>
-                <a
-                  className="text-base font-medium hover:underline underline-offset-4"
-                  href="/#steps"
-                >
-                  Lo Hacemos Realidad
                 </a>
                 <div className="w-full bg-primary h-[1px]"></div>
                 <a

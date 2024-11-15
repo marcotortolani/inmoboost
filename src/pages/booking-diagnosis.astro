@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Booking from '../components/react/Booking.tsx'
+import BookingCalendly from '../components/react/BookingCalendly.tsx'
+import CalendlyEmbed from '../components/react/CalendlyEmbed.tsx'
+---
+
+<Layout title="Agenda tu Diagnóstico">
+  <!-- <Booking client:visible /> -->
+  <!-- <BookingCalendly client:visible /> -->
+  <CalendlyEmbed client:visible />
+</Layout>

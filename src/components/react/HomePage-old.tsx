@@ -1,91 +1,16 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { ChevronRight, Home, Mail, Menu } from 'lucide-react'
-import { useState } from 'react'
+
+import { ChevronRight, Home, Mail } from 'lucide-react'
+import Footer from './Footer'
 
 export default function HomePage() {
-  const [isOpen, setIsOpen] = useState(false)
-
+  const handleRedirect = (href: string) => {
+    window.location.href = href
+  }
   return (
-    <div className=" w-full flex flex-col min-h-screen bg-white">
-      <header className="px-4 lg:px-6 h-16 flex items-center">
-        <a className="flex items-center justify-center" href="#">
-          <Home className="h-6 w-6 text-blue-900" />
-          <span className="ml-2 text-lg font-bold text-blue-900">
-            InmoBoost
-          </span>
-        </a>
-        <div className="ml-auto flex items-center">
-          <nav className="hidden md:flex gap-4 sm:gap-6">
-            <a
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#about"
-            >
-              Sobre Nosotros
-            </a>
-            <a
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#services"
-            >
-              Servicios
-            </a>
-            <a
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#testimonials"
-            >
-              Testimonios
-            </a>
-            <a
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#contact"
-            >
-              Contacto
-            </a>
-          </nav>
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-8 w-8" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-3/4 sm:w-1/2 bg-white">
-              <nav className="flex flex-col gap-4 ">
-                <a
-                  className="text-sm font-medium hover:underline underline-offset-4"
-                  href="#about"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sobre Nosotros
-                </a>
-                <a
-                  className="text-sm font-medium hover:underline underline-offset-4"
-                  href="#services"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Servicios
-                </a>
-                <a
-                  className="text-sm font-medium hover:underline underline-offset-4"
-                  href="#testimonials"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Testimonios
-                </a>
-                <a
-                  className="text-sm font-medium hover:underline underline-offset-4"
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contacto
-                </a>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </header>
-      <main className="">
+    <div>
+      <main className=" w-full flex flex-col min-h-screen bg-white">
         {/* Call to Action */}
         <section className="w-full flex justify-center py-12 md:py-24 lg:py-32 xl:py-48 bg-primary text-white">
           <div className="container px-4 md:px-6">
@@ -103,7 +28,10 @@ export default function HomePage() {
                 <h2 className="text-2xl font-semibold">
                   ¡Empieza tu transformación hoy mismo!
                 </h2>
-                <Button className="bg-sky-600 text-white hover:bg-gray-100 rounded-3xl">
+                <Button
+                  className="bg-sky-600 text-white hover:bg-gray-100 rounded-3xl"
+                  onClick={() => handleRedirect('/booking-diagnosis')}
+                >
                   Agenda tu Diagnóstico Gratuito Ahora
                 </Button>
               </div>
@@ -213,39 +141,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonios */}
-        {/* <section
-          className="w-full flex justify-center py-12 md:py-24 lg:py-32 bg-gray-50"
-          id="testimonials"
-        >
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-extrabold tracking-wide sm:text-4xl md:text-5xl text-center mb-8">
-              Testimonios
-            </h2>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="bg-white shadow-lg">
-                <CardContent className="p-6">
-                  <p className="mb-4 text-lg">
-                    &quot;InmoBoost ha incrementado nuestras ventas un 30% en
-                    seis meses.&quot;
-                  </p>
-                  <p className="font-bold">— Germán, Director de Ionik</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white shadow-lg">
-                <CardContent className="p-6">
-                  <p className="mb-4 text-lg">
-                    &quot;La optimización de procesos nos ha permitido destacar
-                    en el mercado.&quot;
-                  </p>
-                  <p className="font-bold">
-                    — Leandro, Dueño de [Nombre de la Empresa]
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section> */}
+        {/* Testimonials */}
 
         {/* Nosotros */}
         <section
@@ -323,45 +219,17 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <Button className=" bg-sky-600 text-white rounded-3xl">
+              <Button
+                className=" bg-sky-600 text-white rounded-3xl"
+                onClick={() => handleRedirect('/booking-diagnosis')}
+              >
                 Agenda tu Diagnóstico Gratuito
               </Button>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          © 2024 InmoBoost. Todos los derechos reservados.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <a
-            className="text-xs hover:underline underline-offset-4"
-            href="#about"
-          >
-            Sobre Nosotros
-          </a>
-          <a
-            className="text-xs hover:underline underline-offset-4"
-            href="#services"
-          >
-            Servicios
-          </a>
-          <a
-            className="text-xs hover:underline underline-offset-4"
-            href="#testimonials"
-          >
-            Testimonios
-          </a>
-          <a
-            className="text-xs hover:underline underline-offset-4"
-            href="#contact"
-          >
-            Contacto
-          </a>
-        </nav>
-      </footer>
+      <Footer />
     </div>
   )
 }

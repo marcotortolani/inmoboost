@@ -13,7 +13,7 @@ export default function SectionSteps() {
           <div className="absolute left-0 top-0 translate-x-[-50%] translate-y-[10%] h-[500px] w-[500px] xl:translate-x-[-100%] xl:translate-y-0 xl:h-[500px] xl:w-[500px] rounded-full bg-primary/90"></div>
         </div>
         <div className="flex flex-col justify-center space-y-6 text-primary">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-bold text-center lg:text-left">
             Cómo lo hacemos <br /> Realidad!
           </h2>
           <div className="space-y-8">

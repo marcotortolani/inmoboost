@@ -37,7 +37,7 @@ export default function Component() {
               </div>
               <div className="space-x-4">
                 <Button
-                  className="bg-green-500 hover:bg-green-600"
+                  className="bg-emerald-500 hover:bg-emerald-600"
                   onClick={() => handleRedirect('/booking-diagnosis')}
                 >
                   Agenda tu Diagnóstico Gratuito Ahora

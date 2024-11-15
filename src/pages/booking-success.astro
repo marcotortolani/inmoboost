@@ -1,10 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ConfirmationPage from '@/components/react/ConfirmationPage'
 ---
 
 <Layout title="landing">
-  <div class="w-screen flex flex-col items-center">
-    <h1>Ya agendamos tu cita</h1>
-    <p>Nos vemos pronto</p>
-  </div>
+  <ConfirmationPage client:visible />
 </Layout>
